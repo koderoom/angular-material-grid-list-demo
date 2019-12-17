@@ -1,19 +1,12 @@
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile rowspan="2" colspan="2" style="background-color: royalblue;">1</mat-grid-tile>
-  <mat-grid-tile style="background-color: royalblue;">2</mat-grid-tile>
-  <mat-grid-tile rowspan="2" style="background-color: royalblue;">3</mat-grid-tile>
-  <mat-grid-tile style="background-color: royalblue;">4</mat-grid-tile>
+<mat-grid-list cols="4" rowHeight="150px">
+  <mat-grid-tile 
+    *ngFor="let item of list; let index = index;"
+    [rowspan]="item.rows" 
+    [colspan]="item.cols" 
+    style="background-color: royalblue;">
+    
+    <img src="https://picsum.photos/200/{{300 + index}}" alt="" style="object-fit: cover; width: 100%; height: 100%;">
 
 
-  <mat-grid-tile style="background-color: royalblue;">5</mat-grid-tile>
-  <mat-grid-tile rowspan="2" colspan="2" style="background-color: royalblue;">6</mat-grid-tile>
-  <mat-grid-tile style="background-color: royalblue;">7</mat-grid-tile>
-  <mat-grid-tile style="background-color: royalblue;">8</mat-grid-tile>
-  <mat-grid-tile style="background-color: royalblue;">9</mat-grid-tile>
-
-  <mat-grid-tile style="background-color: royalblue;">10</mat-grid-tile>
-  <mat-grid-tile style="background-color: royalblue;">11</mat-grid-tile>
-  <mat-grid-tile rowspan="2" colspan="2" style="background-color: royalblue;">12</mat-grid-tile>
-  <mat-grid-tile style="background-color: royalblue;">13</mat-grid-tile>
-  <mat-grid-tile style="background-color: royalblue;">14</mat-grid-tile>
+  </mat-grid-tile>
 </mat-grid-list>
